@@ -5,7 +5,7 @@ const CatLoggr = require('cat-loggr');
 const log = new CatLoggr();
 
 async function init() {
-    const OverSee = await db.get('OverSee_instance');
+    const OverSee = await db.get('VegasXCore_instance');
     if (!OverSee) {
         log.init('this is probably your first time starting VegasXCore, welcome!');
         log.init('you can find documentation for the panel at https://hydrenllc.us.kg');
@@ -27,8 +27,8 @@ async function init() {
             originalVersion: config.version
         }
 
-        await db.set('OverSee_instance', info)
-        log.info('initialized OverSee panel with id: ' + OverSeeID)
+        await db.set('VegasXCore_instance', info)
+        log.info('initialized VegasXCore panel with id: ' + VegasXCoreID)
     }        
 
     log.info('init complete!')
